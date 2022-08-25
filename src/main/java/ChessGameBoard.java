@@ -16,7 +16,7 @@ import java.awt.GridLayout;
  */
 public class ChessGameBoard extends JPanel{
     private BoardSquare[][] chessCells;
-    private BoardListener   listener;
+    private transient BoardListener  listener;
     // ----------------------------------------------------------
     /**
      * Returns the entire board.
@@ -73,8 +73,8 @@ public class ChessGameBoard extends JPanel{
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public ArrayList<ChessGamePiece> getAllWhitePieces(){
-        ArrayList<ChessGamePiece> whitePieces = new ArrayList<ChessGamePiece>();
+    public ArrayList<ChessGamePiece> getAllWhitePieces(){ //NOSONAR
+        ArrayList<ChessGamePiece> whitePieces = new ArrayList<>();
         for ( int i = 0; i < 8; i++ ){
             for ( int j = 0; j < 8; j++ ){
                 if ( chessCells[i][j].getPieceOnSquare() != null
@@ -92,8 +92,8 @@ public class ChessGameBoard extends JPanel{
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public ArrayList<ChessGamePiece> getAllBlackPieces(){
-        ArrayList<ChessGamePiece> blackPieces = new ArrayList<ChessGamePiece>();
+    public ArrayList<ChessGamePiece> getAllBlackPieces(){  //NOSONAR
+        ArrayList<ChessGamePiece> blackPieces = new ArrayList<>();
         for ( int i = 0; i < 8; i++ ){
             for ( int j = 0; j < 8; j++ ){
                 if ( chessCells[i][j].getPieceOnSquare() != null
@@ -148,14 +148,13 @@ public class ChessGameBoard extends JPanel{
             }
         }
         repaint();
-        //revalidate();
         // only the combination of these two calls work...*shrug*
     }
     /**
      * (Re)initializes this ChessGameBoard to its default layout with all 32
      * pieces added.
      */
-    public void initializeBoard(){
+    public void initializeBoard(){ //NOSONAR
         resetBoard( false );
         for ( int i = 0; i < chessCells.length; i++ ){
             for ( int j = 0; j < chessCells[0].length; j++ ){

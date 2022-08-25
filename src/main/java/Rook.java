@@ -13,7 +13,6 @@ import java.util.Map;
  */
 public class Rook extends ChessGamePiece{
 	protected Map<Integer, String> icons_map;
-	// private ArrayList<String> possibleMoves;
 	// ----------------------------------------------------------
 	/**
 	 * Create a new Rook object.
@@ -41,7 +40,7 @@ public class Rook extends ChessGamePiece{
 			ArrayList<String> southMoves = calculateSouthMoves( board, 8 );
 			ArrayList<String> westMoves = calculateWestMoves( board, 8 );
 			ArrayList<String> eastMoves = calculateEastMoves( board, 8 );
-			ArrayList<String> allMoves = new ArrayList<String>();
+			ArrayList<String> allMoves = new ArrayList<>();
 			allMoves.addAll( northMoves );
 			allMoves.addAll( southMoves );
 			allMoves.addAll( westMoves );
@@ -55,7 +54,7 @@ public class Rook extends ChessGamePiece{
 	 */
 	@Override
 	public ImageIcon createImageByPieceType() {
-		icons_map = new HashMap<Integer, String>();
+		icons_map = new HashMap<>();
 
 		icons_map.put(-1, "chessImages/default-Unassigned.gif");
 		icons_map.put(ChessGamePiece.BLACK, "chessImages/BlackRook.gif");

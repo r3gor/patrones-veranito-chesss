@@ -74,16 +74,15 @@ public class ChessMenuBar
     /**
      * Takes an appropriate action if the about button is clicked.
      */
-    private void aboutHandler(){
+    private void aboutHandler(){ //NOSONAR
         JOptionPane.showMessageDialog(
             this.getParent(),
-            "YetAnotherChessGame v1.0 by:\nBen Katz\nMyles David\n"
-                + "Danielle Bushrow\n\nFinal Project for CS2114 @ VT" );
+            "YetAnotherChessGame v1.0 by:\nBen Katz\nMyles David\n Danielle Bushrow\n\nFinal Project for CS2114 @ VT" );
     }
     /**
      * Takes an appropriate action if the restart button is clicked.
      */
-    private void restartHandler(){
+    private void restartHandler(){ //NOSONAR
         ( (ChessPanel)this.getParent() ).getGameEngine().reset();
     }
     /**
@@ -91,7 +90,7 @@ public class ChessMenuBar
      * Uses Tony Allevato's code for exiting a GUI app without System.exit()
      * calls.
      */
-    private void exitHandler(){
+    private void exitHandler() { //NOSONAR
         JOptionPane.showMessageDialog( this.getParent(), "Thanks for leaving"
             + ", quitter! >:(" );
         Component possibleFrame = this;
@@ -99,13 +98,15 @@ public class ChessMenuBar
             possibleFrame = possibleFrame.getParent();
         }
         JFrame frame = (JFrame)possibleFrame;
-        frame.setVisible( false );
-        frame.dispose();
+        if(frame != null) {
+          frame.setVisible( false );
+          frame.dispose();
+        }
     }
     /**
      * Takes an appropriate action if the toggle graveyard button is clicked.
      */
-    private void toggleGraveyardHandler(){
+    private void toggleGraveyardHandler(){ //NOSONAR
         ( (ChessPanel)this.getParent() ).getGraveyard( 1 ).setVisible(
             !( (ChessPanel)this.getParent() ).getGraveyard( 1 ).isVisible() );
         ( (ChessPanel)this.getParent() ).getGraveyard( 2 ).setVisible(
@@ -114,7 +115,7 @@ public class ChessMenuBar
     /**
      * Takes an appropriate action if the toggle game log button is clicked.
      */
-    private void toggleGameLogHandler(){
+    private void toggleGameLogHandler(){ //NOSONAR
         ( (ChessPanel)this.getParent() ).getGameLog().setVisible(
             !( (ChessPanel)this.getParent() ).getGameLog().isVisible() );
         ( (ChessPanel)this.getParent() ).revalidate();

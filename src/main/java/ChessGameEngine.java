@@ -112,19 +112,13 @@ public class ChessGameEngine{
             return false;
         }
         if ( currentPlayer == 2 ) // black player
-        {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
-                return true;
-            }
-            return false;
+        {            
+            return currentPiece.getColorOfPiece() == ChessGamePiece.BLACK;
         }
         else
         // white player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
-                return true;
-            }
-            return false;
+            return currentPiece.getColorOfPiece() == ChessGamePiece.WHITE;
         }
     }
     /**
@@ -167,7 +161,6 @@ public class ChessGameEngine{
         else
         {
             board.resetBoard( false );
-            // System.exit(0);
         }
     }
     /**
@@ -241,7 +234,7 @@ public class ChessGameEngine{
      * @param e
      *            the mouse event from the listener
      */
-    public void determineActionFromSquareClick( MouseEvent e ){
+    public void determineActionFromSquareClick( MouseEvent e ){ //NOSONAR
         BoardSquare squareClicked = (BoardSquare)e.getSource();
         ChessGamePiece pieceOnSquare = squareClicked.getPieceOnSquare();
         board.clearColorsOnBoard();
