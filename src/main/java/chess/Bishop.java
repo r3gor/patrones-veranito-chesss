@@ -1,8 +1,10 @@
+package chess;
+
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 // -------------------------------------------------------------------------
 /**
- * Class to represent the Bishop piece.
+ * Class to represent the chess.Bishop piece.
  * 
  * @author Ben Katz (bakatz)
  * @author Myles David II (davidmm2)
@@ -11,14 +13,14 @@ import javax.swing.ImageIcon;
  */
 public class Bishop extends ChessGamePiece{
 	/**
-	 * Creates a new Bishop object.
+	 * Creates a new chess.Bishop object.
 	 * 
 	 * @param board
 	 *			board the board to create the bishop on
 	 * @param row
-	 *			row location of the Bishop
+	 *			row location of the chess.Bishop
 	 * @param col
-	 *			col location of the Bishop
+	 *			col location of the chess.Bishop
 	 * @param color
 	 *			either GamePiece.WHITE, BLACK, or UNASSIGNED
 	 */
@@ -55,17 +57,17 @@ public class Bishop extends ChessGamePiece{
 	public ImageIcon createImageByPieceType(){
 		if ( getColorOfPiece() == ChessGamePiece.WHITE ){
 			return new ImageIcon(
-				getClass().getResource("chessImages/WhiteBishop.gif")
+				getClass().getResource("/chessImages/WhiteBishop.gif")
 			);			
 		}
 		else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
 			return new ImageIcon(
-				getClass().getResource("chessImages/BlackBishop.gif")
+				getClass().getResource("/chessImages/BlackBishop.gif")
 			);
 		}
 		else{
 			return new ImageIcon(
-				getClass().getResource("chessImages/BlackBishop.gif")
+				getClass().getResource("/chessImages/BlackBishop.gif")
 			);
 		}
 	}

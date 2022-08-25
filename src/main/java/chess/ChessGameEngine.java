@@ -1,3 +1,5 @@
+package chess;
+
 import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -21,11 +23,11 @@ public class ChessGameEngine{
     private King           king2;
     // ----------------------------------------------------------
     /**
-     * Create a new ChessGameEngine object. Accepts a fully-created
-     * ChessGameBoard. (i.e. all components rendered)
+     * Create a new chess.ChessGameEngine object. Accepts a fully-created
+     * chess.ChessGameBoard. (i.e. all components rendered)
      *
      * @param board
-     *            the reference ChessGameBoard
+     *            the reference chess.ChessGameBoard
      */
     public ChessGameEngine( ChessGameBoard board ){
         firstClick = true;
@@ -122,7 +124,7 @@ public class ChessGameEngine{
         }
     }
     /**
-     * Determines if the requested King is in check.
+     * Determines if the requested chess.King is in check.
      *
      * @param checkCurrent
      *            if true, will check if the current king is in check if false,

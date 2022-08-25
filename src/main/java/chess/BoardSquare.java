@@ -1,3 +1,5 @@
+package chess;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 // -------------------------------------------------------------------------
@@ -17,7 +19,7 @@ public class BoardSquare
     private JLabel         imageLabel;
     // ----------------------------------------------------------
     /**
-     * Create a new BoardSquare object.
+     * Create a new chess.BoardSquare object.
      *
      * @param row
      *            the row
@@ -34,7 +36,7 @@ public class BoardSquare
         updateImage();
     }
     /**
-     * Updates the image for this BoardSquare.
+     * Updates the image for this chess.BoardSquare.
      */
     private void updateImage(){
         if ( imageLabel != null ){

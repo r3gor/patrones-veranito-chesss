@@ -1,3 +1,5 @@
+package chess;
+
 import java.awt.GridLayout;
 import javax.swing.*;
 // -------------------------------------------------------------------------
@@ -14,7 +16,7 @@ public class ChessGraveyard
     private String title;
     // ----------------------------------------------------------
     /**
-     * Create a new ChessGraveyard object.
+     * Create a new chess.ChessGraveyard object.
      *
      * @param title
      *            the title of the graveyard

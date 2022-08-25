@@ -1,8 +1,10 @@
+package chess;
+
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
 // -------------------------------------------------------------------------
 /**
- * Represents a Knight game piece.
+ * Represents a chess.Knight game piece.
  *
  * @author Ben Katz (bakatz)
  * @author Myles David II (davidmm2)
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 public class Knight
     extends ChessGamePiece{
     /**
-     * Knight constructor for gamePiece
+     * chess.Knight constructor for gamePiece
      *
      * @param row
      *            the row to create the knight on
@@ -75,7 +77,7 @@ public class Knight
         return moves;
     }
     /**
-     * Calculates the possible moves for this Knight.
+     * Calculates the possible moves for this chess.Knight.
      *
      * @param board
      *            the game board to check
@@ -99,18 +101,18 @@ public class Knight
     public ImageIcon createImageByPieceType(){
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
-                getClass().getResource("chessImages/WhiteKnight.gif")
+                getClass().getResource("/chessImages/WhiteKnight.gif")
             );            
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                getClass().getResource("chessImages/BlackKnight.gif")
+                getClass().getResource("/chessImages/BlackKnight.gif")
             );            
         }
         else
         {
             return new ImageIcon(
-                getClass().getResource("chessImages/default-Unassigned.gif")
+                getClass().getResource("/chessImages/default-Unassigned.gif")
             );            
         }
     }
